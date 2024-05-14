@@ -1,8 +1,6 @@
 from django.urls import path
-from .views import PostListView
+from . import views
 
-
-# ビューにポストはまだ作成されていない
 urlpatterns = [
-    path('', PostListView.as_view(), name='post_list')
+    path('', views.post_list, name='post_list'),
 ]

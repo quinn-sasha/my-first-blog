@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+
+        {% for published_post in published_posts %}
+        <div>
+            <h2>
+                <a href="">{{ published_post.title }}</a>
+            </h2>
+            <p>published: {{ published_post.published_date }}</p>
+            <p>{{ published_post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
